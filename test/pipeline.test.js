@@ -28,7 +28,7 @@ test('CI/CD Quality Gatekeeper - Instructor Demo Tests', async (t) => {
       releaseApproval.status,
       'READY_FOR_RELEASE',
       '\n❌ QUALITY GATEKEEPER BLOQUEADO:\n' +
-      '   El estado de aprobación es "UNDER_REVIEW".\n' +
+      '   El estado de aprobación es "UNDER_REVIEW ".\n' +
       '   Para autorizar el release a producción (main), debes cambiar status a "READY_FOR_RELEASE".'
     );
   });
