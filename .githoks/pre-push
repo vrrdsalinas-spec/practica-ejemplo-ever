@@ -1,3 +1,4 @@
+
 #!/bin/sh
 
 # Hook pre-push: Bloquea push directo a main o master a menos que sea aprobado por Jenkins
@@ -8,7 +9,7 @@ fi
 while read local_ref local_sha remote_ref remote_sha
 do
     case "$remote_ref" in
-        refs/heads/main|refs/heads/master
+        refs/heads/main|refs/heads/master)
             echo ""
             echo "🛑 ============================================================"
             echo "⛔ ACCESO DENEGADO A RAMA PROTEGIDA ($remote_ref)"
@@ -25,4 +26,4 @@ do
     esac
 done
 
-exit 0
+exit 
